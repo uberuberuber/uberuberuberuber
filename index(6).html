@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!-- saved from url=(0145)https://s0.2mdn.net/ads/richmedia/studio/pv2/47115445/20170125110213964/index.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=DhmJNhZJwh&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>BA 300x250</title>
+    
+    <meta name="ad.size" content="width=300,height=250">
+<script type="text/javascript" charset="UTF-8" src="./createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js"></script><script type="text/javascript" charset="UTF-8" src="./tweenmax_1.18.5_23b0de6da0ee295131e32a500470610c_min.js"></script><script type="text/javascript" charset="UTF-8" src="./300x250.main.js"></script><style type="text/css">@charset "UTF-8";
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Rubrik-Light';
+  src: url(Rubrik-Light.eot);
+  src: local("\263A"), url(Rubrik-Light.woff) format("woff"), url(Rubrik-Light.ttf) format("truetype"), url(Rubrik-Light.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.rubrik {
+  font-family: Rubrik-Light;
+  color: #fff; }
+
+#preloadShape {
+  position: absolute;
+  width: 298px;
+  height: 248px;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
+  z-index: 700;
+  display: none;
+  overflow: hidden;
+  border: 1px solid gray; }
+
+#preloadShape .circle {
+  border: 5px solid #ddd;
+  border-bottom-color: #fff100;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  height: 20px;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -12.5px;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-animation: spin 0.5s linear infinite;
+     -moz-animation: spin 0.5s linear infinite;
+       -o-animation: spin 0.5s linear infinite;
+          animation: spin 0.5s linear infinite;
+  width: 20px; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+         transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+         transform: rotate(360deg); } }
+
+@-o-keyframes spin {
+  from {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg); }
+  to {
+    -o-transform: rotate(360deg);
+       transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.yellow {
+  color: #ffec00; }
+
+html, body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 250px;
+  overflow: hidden; }
+
+#wrapper {
+  opacity: 0;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#border {
+  /*container css*/
+  position: absolute;
+  z-index: 99;
+  width: 298px;
+  height: 248px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid gray; }
+
+#copyCanvas {
+  margin: 0;
+  padding: 0;
+  z-index: 30;
+  position: absolute; }
+
+#background {
+  position: absolute;
+  background-image: url(images/background.jpg);
+  bottom: -41px;
+  left: 0;
+  width: 900px;
+  height: 800px;
+  z-index: 0; }
+
+#eeLogo {
+  position: absolute;
+  background-image: url(images/generated/sprite.png);
+  background-position: 0px 0px;
+  width: 300px;
+  height: 250px;
+  right: 0;
+  z-index: 99;
+  opacity: 0; }
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 19; }
+
+#speedTestLogo {
+  position: absolute;
+  background-image: url(images/generated/sprite.png);
+  background-position: 0px -260px;
+  width: 37px;
+  height: 39px;
+  z-index: 99;
+  opacity: 0; }
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background-image: url(images/dot.png);
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 0;
+  overflow: hidden; }
+
+#dotContainer {
+  position: absolute;
+  width: 527px;
+  height: 340px;
+  top: -94px;
+  left: -35px;
+  overflow: hidden;
+  z-index: 15;
+  opacity: 1; }
+
+#gridBackground {
+  background-image: url(images/grid.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  top: -85px;
+  left: 0;
+  overflow: hidden;
+  z-index: 15;
+  opacity: 1; }
+
+#rubrikFrame2 {
+  top: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 30; }
+
+#rubrikFrame3 {
+  top: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 30; }
+
+#rubrikFrame5 {
+  top: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 30;
+  text-align: right; }
+
+#ctaContainer {
+  top: 0px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 30; }
+
+#cta {
+  padding: 0 16px;
+  background-color: #ffec00;
+  color: #6a737b;
+  height: 32px; }
+  #cta .cta-arrow {
+    display: block;
+    float: right;
+    margin-top: 11px;
+    width: 7px;
+    height: 11px; }
+    #cta .cta-arrow .cta-arrow-icon {
+      display: block;
+      background-image: url(images/generated/sprite.png);
+      background-position: -47px -260px;
+      width: 14px;
+      height: 22px;
+      -webkit-transform: scale(0.5);
+         -moz-transform: scale(0.5);
+          -ms-transform: scale(0.5);
+           -o-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 0 0;
+         -moz-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+           -o-transform-origin: 0 0;
+              transform-origin: 0 0; }
+  #cta #ctaCopyCanvas {
+    height: 32px;
+    margin-right: 6px; }
+
+#ctaSubcopy {
+  margin-top: 3px;
+  z-index: 30;
+  font-size: 8.3px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.animation-container {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  z-index: 30;
+  overflow: hidden; }
+</style></head>
+<body>
+<div id="preloadShape" style="display: none;">
+  <div class="circle"></div>
+</div>
+<div id="wrapper" style="opacity: 1;">
+    <div id="border"></div>
+    <div id="eeLogo"></div>
+    <div id="speedTestLogo" style="top: 200px; left: 250px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 730);"></div>
+    <div class="rubrik" id="rubrikFrame2" style="font-size: 13.5px; top: 152px; left: 170px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 400); display: none;"></div>
+    <div class="rubrik" id="rubrikFrame3" style="font-size: 13.5px; top: 152px; left: 20px; opacity: 1; transform: matrix(1, 0, 0, 1, -500, 0); display: none;"></div>
+    <div class="rubrik" id="rubrikFrame5" style="font-size: 13.5px; top: 89px; right: 12px;">Until 4th April</div>
+    <div id="ctaContainer" style="top: 112.2px; right: 12px;">
+      <div id="cta">
+        <canvas id="ctaCopyCanvas" width="261" height="128" style="width: 65.1667px; height: 32px;"></canvas>
+        <span class="cta-arrow"><i class="cta-arrow-icon"></i></span>
+      </div>
+      <div class="rubrik" id="ctaSubcopy" style="font-size: 8.4px;"><span id="ctaSubcopyContent">Another No Brainer from EE</span></div>
+    </div>
+
+    <canvas id="copyCanvas" width="600" height="500" style="width: 300px; height: 250px;"></canvas>
+
+    <div id="dotContainer" style="transform: matrix(1, 0, 0, 1, -280, 100);"><div class="dot" style="left: 0px; top: 0px; display: none;"></div><div class="dot" style="left: 35px; top: 0px; display: none;"></div><div class="dot" style="left: 70px; top: 0px; display: none;"></div><div class="dot" style="left: 105px; top: 0px; display: none;"></div><div class="dot" style="left: 140px; top: 0px; display: none;"></div><div class="dot" style="left: 175px; top: 0px; display: none;"></div><div class="dot" style="left: 210px; top: 0px; display: none;"></div><div class="dot" style="left: 245px; top: 0px; display: none;"></div><div class="dot" style="left: 280px; top: 0px; display: none;"></div><div class="dot" style="left: 315px; top: 0px; display: none;"></div><div class="dot" style="left: 350px; top: 0px; display: none;"></div><div class="dot" style="left: 385px; top: 0px; display: none;"></div><div class="dot" style="left: 420px; top: 0px; display: none;"></div><div class="dot" style="left: 455px; top: 0px; display: none;"></div><div class="dot" style="left: 490px; top: 0px; display: none;"></div><div class="dot" style="left: 525px; top: 0px; display: none;"></div><div class="dot" style="left: 0px; top: 35px; display: none;"></div><div class="dot" style="left: 35px; top: 35px; display: none;"></div><div class="dot" style="left: 70px; top: 35px; display: none;"></div><div class="dot" style="left: 105px; top: 35px; display: none;"></div><div class="dot" style="left: 140px; top: 35px; display: none;"></div><div class="dot" style="left: 175px; top: 35px; display: none;"></div><div class="dot" style="left: 210px; top: 35px; display: none;"></div><div class="dot" style="left: 245px; top: 35px; display: none;"></div><div class="dot" style="left: 280px; top: 35px; display: none;"></div><div class="dot" style="left: 315px; top: 35px; display: none;"></div><div class="dot" style="left: 350px; top: 35px; display: none;"></div><div class="dot" style="left: 385px; top: 35px; display: none;"></div><div class="dot" style="left: 420px; top: 35px; display: none;"></div><div class="dot" style="left: 455px; top: 35px; display: none;"></div><div class="dot" style="left: 490px; top: 35px; display: none;"></div><div class="dot" style="left: 525px; top: 35px; display: none;"></div><div class="dot" style="left: 0px; top: 70px; display: none;"></div><div class="dot" style="left: 35px; top: 70px; display: none;"></div><div class="dot" style="left: 70px; top: 70px; display: none;"></div><div class="dot" style="left: 105px; top: 70px; display: none;"></div><div class="dot" style="left: 140px; top: 70px; display: none;"></div><div class="dot" style="left: 175px; top: 70px; display: none;"></div><div class="dot" style="left: 210px; top: 70px; display: none;"></div><div class="dot" style="left: 245px; top: 70px; display: none;"></div><div class="dot" style="left: 280px; top: 70px; display: none;"></div><div class="dot" style="left: 315px; top: 70px; display: none;"></div><div class="dot" style="left: 350px; top: 70px; display: none;"></div><div class="dot" style="left: 385px; top: 70px; display: none;"></div><div class="dot" style="left: 420px; top: 70px; display: none;"></div><div class="dot" style="left: 455px; top: 70px; display: none;"></div><div class="dot" style="left: 490px; top: 70px; display: none;"></div><div class="dot" style="left: 525px; top: 70px; display: none;"></div><div class="dot" style="left: 0px; top: 105px; display: none;"></div><div class="dot" style="left: 35px; top: 105px; display: none;"></div><div class="dot" style="left: 70px; top: 105px; display: none;"></div><div class="dot" style="left: 105px; top: 105px; display: none;"></div><div class="dot" style="left: 140px; top: 105px; display: none;"></div><div class="dot" style="left: 175px; top: 105px; display: none;"></div><div class="dot" style="left: 210px; top: 105px; display: none;"></div><div class="dot" style="left: 245px; top: 105px; display: none;"></div><div class="dot" style="left: 280px; top: 105px; display: none;"></div><div class="dot" style="left: 315px; top: 105px; display: none;"></div><div class="dot" style="left: 350px; top: 105px; display: none;"></div><div class="dot" style="left: 385px; top: 105px; display: none;"></div><div class="dot" style="left: 420px; top: 105px; display: none;"></div><div class="dot" style="left: 455px; top: 105px; display: none;"></div><div class="dot" style="left: 490px; top: 105px; display: none;"></div><div class="dot" style="left: 525px; top: 105px; display: none;"></div><div class="dot" style="left: 0px; top: 140px; display: none;"></div><div class="dot" style="left: 35px; top: 140px; display: none;"></div><div class="dot" style="left: 70px; top: 140px; display: none;"></div><div class="dot" style="left: 105px; top: 140px; display: none;"></div><div class="dot" style="left: 140px; top: 140px; display: none;"></div><div class="dot" style="left: 175px; top: 140px; display: none;"></div><div class="dot" style="left: 210px; top: 140px; display: none;"></div><div class="dot" style="left: 245px; top: 140px; display: none;"></div><div class="dot" style="left: 280px; top: 140px; display: none;"></div><div class="dot" style="left: 315px; top: 140px; display: none;"></div><div class="dot" style="left: 350px; top: 140px; display: none;"></div><div class="dot" style="left: 385px; top: 140px; display: none;"></div><div class="dot" style="left: 420px; top: 140px; display: none;"></div><div class="dot" style="left: 455px; top: 140px; display: none;"></div><div class="dot" style="left: 490px; top: 140px; display: none;"></div><div class="dot" style="left: 525px; top: 140px; display: none;"></div><div class="dot" style="left: 0px; top: 175px; display: none;"></div><div class="dot" style="left: 35px; top: 175px; display: none;"></div><div class="dot" style="left: 70px; top: 175px; display: none;"></div><div class="dot" style="left: 105px; top: 175px; display: none;"></div><div class="dot" style="left: 140px; top: 175px; display: none;"></div><div class="dot" style="left: 175px; top: 175px; display: none;"></div><div class="dot" style="left: 210px; top: 175px; display: none;"></div><div class="dot" style="left: 245px; top: 175px; display: none;"></div><div class="dot" style="left: 280px; top: 175px; display: none;"></div><div class="dot" style="left: 315px; top: 175px; display: none;"></div><div class="dot" style="left: 350px; top: 175px; display: none;"></div><div class="dot" style="left: 385px; top: 175px; display: none;"></div><div class="dot" style="left: 420px; top: 175px; display: none;"></div><div class="dot" style="left: 455px; top: 175px; display: none;"></div><div class="dot" style="left: 490px; top: 175px; display: none;"></div><div class="dot" style="left: 525px; top: 175px; display: none;"></div><div class="dot" style="left: 0px; top: 210px; display: none;"></div><div class="dot" style="left: 35px; top: 210px; display: none;"></div><div class="dot" style="left: 70px; top: 210px; display: none;"></div><div class="dot" style="left: 105px; top: 210px; display: none;"></div><div class="dot" style="left: 140px; top: 210px; display: none;"></div><div class="dot" style="left: 175px; top: 210px; display: none;"></div><div class="dot" style="left: 210px; top: 210px; display: none;"></div><div class="dot" style="left: 245px; top: 210px; display: none;"></div><div class="dot" style="left: 280px; top: 210px; display: none;"></div><div class="dot" style="left: 315px; top: 210px; display: none;"></div><div class="dot" style="left: 350px; top: 210px; display: none;"></div><div class="dot" style="left: 385px; top: 210px; display: none;"></div><div class="dot" style="left: 420px; top: 210px; display: none;"></div><div class="dot" style="left: 455px; top: 210px; display: none;"></div><div class="dot" style="left: 490px; top: 210px; display: none;"></div><div class="dot" style="left: 525px; top: 210px; display: none;"></div><div class="dot" style="left: 0px; top: 245px; display: none;"></div><div class="dot" style="left: 35px; top: 245px; display: none;"></div><div class="dot" style="left: 70px; top: 245px; display: none;"></div><div class="dot" style="left: 105px; top: 245px; display: none;"></div><div class="dot" style="left: 140px; top: 245px; display: none;"></div><div class="dot" style="left: 175px; top: 245px; display: none;"></div><div class="dot" style="left: 210px; top: 245px; display: none;"></div><div class="dot" style="left: 245px; top: 245px; display: none;"></div><div class="dot" style="left: 280px; top: 245px; display: none;"></div><div class="dot" style="left: 315px; top: 245px; display: none;"></div><div class="dot" style="left: 350px; top: 245px; display: none;"></div><div class="dot" style="left: 385px; top: 245px; display: none;"></div><div class="dot" style="left: 420px; top: 245px; display: none;"></div><div class="dot" style="left: 455px; top: 245px; display: none;"></div><div class="dot" style="left: 490px; top: 245px; display: none;"></div><div class="dot" style="left: 525px; top: 245px; display: none;"></div><div class="dot" style="left: 0px; top: 280px; display: none;"></div><div class="dot" style="left: 35px; top: 280px; display: none;"></div><div class="dot" style="left: 70px; top: 280px; display: none;"></div><div class="dot" style="left: 105px; top: 280px; display: none;"></div><div class="dot" style="left: 140px; top: 280px; display: none;"></div><div class="dot" style="left: 175px; top: 280px; display: none;"></div><div class="dot" style="left: 210px; top: 280px; display: none;"></div><div class="dot" style="left: 245px; top: 280px; display: none;"></div><div class="dot" style="left: 280px; top: 280px; display: none;"></div><div class="dot" style="left: 315px; top: 280px; display: none;"></div><div class="dot" style="left: 350px; top: 280px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 385px; top: 280px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 420px; top: 280px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 455px; top: 280px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 490px; top: 280px; display: none; opacity: 0.4;"></div><div class="dot" style="left: 525px; top: 280px; display: none;"></div><div class="dot" style="left: 0px; top: 315px; display: none;"></div><div class="dot" style="left: 35px; top: 315px; display: none;"></div><div class="dot" style="left: 70px; top: 315px; display: none;"></div><div class="dot" style="left: 105px; top: 315px; display: none;"></div><div class="dot" style="left: 140px; top: 315px; display: none;"></div><div class="dot" style="left: 175px; top: 315px; display: none;"></div><div class="dot" style="left: 210px; top: 315px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 245px; top: 315px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 280px; top: 315px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 315px; top: 315px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 350px; top: 315px; display: block; transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0.4;"></div><div class="dot" style="left: 385px; top: 315px; display: none; opacity: 0.4;"></div><div class="dot" style="left: 420px; top: 315px; display: none;"></div><div class="dot" style="left: 455px; top: 315px; display: none;"></div><div class="dot" style="left: 490px; top: 315px; display: none;"></div><div class="dot" style="left: 525px; top: 315px; display: none;"></div></div>
+    <div id="gridBackground" style="transform: matrix(1, 0, 0, 1, -280, 100);"></div>
+    <div id="background" style="transform: matrix(1, 0, 0, 1, -140, 500);"></div>
+
+    
+    
+    
+    <div class="animation-container" id="animationContainer4" style="opacity: 0; width: 170px; height: 240px; top: 0px; left: 0px;"><div style="width: 2380px; height: 240px; background-image: url(&quot;https://s0.2mdn.net/ads/richmedia/studio/pv2/47115445/20170125110213964/images/generated/SIMO_LANDING/SIMO_LANDING.png&quot;); background-position: 0px 0px; background-repeat: no-repeat;"></div></div>
+    <div class="animation-container" id="animationContainer5" style="opacity: 0; width: 155px; height: 160px; top: 80px; left: 15px;"><div style="width: 2325px; height: 160px; background-image: url(&quot;https://s0.2mdn.net/ads/richmedia/studio/pv2/47115445/20170125110213964/images/generated/SIMO_ARM_POINT/SIMO_ARM_POINT.png&quot;); background-position: 0px 0px; background-repeat: no-repeat;"></div></div>
+    
+
+
+<canvas id="canvas2" width="300" height="250" style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 15;"></canvas></div>
+<script src="./Enabler_01_153.js"></script>
+
+
+
+<script type="text/javascript">
+    var politeInit = function () {
+        Enabler.loadScript('https://s0.2mdn.net/ads/studio/cached_libs/createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js', function () {
+            Enabler.loadScript('https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.5_23b0de6da0ee295131e32a500470610c_min.js', function () {
+                Enabler.loadScript('300x250.main.js');
+            });
+        });
+    };
+    var init = function () {
+        if (Enabler.isPageLoaded()) {
+            politeInit();
+        } else {
+            Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+        }
+    };
+    if (Enabler.isInitialized()) {
+        init();
+    } else {
+        Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+    }
+</script>
+
+
+</body></html>
